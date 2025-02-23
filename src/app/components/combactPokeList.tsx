@@ -11,7 +11,7 @@ const Sidebar: React.FC = () => {
   const addedPokemonList = useSelector((state: RootState) => state.pokemon.list);
 
   return (
-    <div className="w-[456px] h-screen bg-white shadow-md">
+    <div className="w-[456px] bg-white shadow-md">
       <div className="w-[456px] fixed flex flex-col items-center justify-center">
       <h1 className="text-2xl p-4 font-bold">LISTOS PARA EL COMBATE</h1>
         <div>
