@@ -37,7 +37,9 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ name, image }) => {
             <div className="absolute top-0 right-0 mt-2 mr-2">
                 <button
                     onClick={() => handleAddRemovePokemon({name, image})}
-                    className="flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 focus:outline-none"
+                    className={`flex items-center justify-center w-8 h-8 text-white rounded-full shadow-lg focus:outline-none ${
+                        pokemonList.some((p) => p.name === name) ? 'bg-red-400 hover:bg-red-600' : 'bg-blue-400 hover:bg-blue-600'
+                    }`}
                     >
                     {pokemonList.some((p) => p.name === name) ? (
                         <TrashIcon className="w-4 h-4" />

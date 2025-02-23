@@ -2,12 +2,10 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchPokemonList } from '../store/pokemonSlice';
-import { RootState, AppDispatch } from '../store';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store';
 import PokemonCard from './pokemonCard';
 import Input from './input';
-import Sidebar from './combactPokeList';
 import Loading from './loading';
 import EmptyState from './emptyState';
 
@@ -41,7 +39,7 @@ const PokemonList: React.FC = () => {
       {filteredPokemonList.length === 0 ? (
           <EmptyState text="No encontramos a ese pokemon"/>
         ) : (
-          <ul className="max-w-[792px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <ul className="max-w-[792px] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {filteredPokemonList.map((pokemon: any) => (
               <li key={pokemon.name}>
                 <PokemonCard name={pokemon.name} image={pokemon.image} />

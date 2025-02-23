@@ -2,7 +2,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ReduxProvider from "./reduxProvider";
-import Sidebar from "./components/combactPokeList";
 import ClientWrapper from "./clientWrapper";
 
 const geistSans = Geist({

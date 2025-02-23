@@ -20,6 +20,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+ul li {
+  list-style: none;
+}
+
 .pokemon-card{
   position: relative;
 }
+

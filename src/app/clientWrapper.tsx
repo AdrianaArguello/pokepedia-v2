@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, ReactNode } from 'react';
+import { useEffect } from 'react';
 import Sidebar from './components/combactPokeList';
 import Loading from './components/loading';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,10 +22,10 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({ children }) => {
 
     return (
         <div className="flex">
-        <div className="flex-1 p-4">
-            {children}
-        </div>
-        <Sidebar />
+            <div className="flex-1 p-4">
+                {children}
+            </div>
+            <Sidebar />
         </div>
     );
 };
