@@ -10,8 +10,8 @@ const Sidebar: React.FC = () => {
   const addedPokemonList = useSelector((state: RootState) => state.pokemon.list);
 
   return (
-    <div className="lg:w-[456px] md:w-[356px] bg-white shadow-md">
-      <div className="lg:w-[456px] md:w-[356px] fixed flex flex-col items-center justify-center">
+    <div className="lg:w-[456px] md:w-[356px] min-h-screen overflow-hidden bg-white shadow-md">
+      <div className="lg:w-[456px] md:w-[356px] h-auto fixed flex flex-col items-center justify-center">
       <h1 className="text-2xl pt-12 pb-2 text-slate-500 font-bold">Listos para el combate</h1>
         <div>
             {addedPokemonList.length === 0 ? (
